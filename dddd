@@ -1,0 +1,13 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("หมาขาว HUB", "Ocean")
+local Tab = Window:NewTab("คนสร้าง")
+local Section = Tab:NewSection("BYหมาขาว")
+local Tab = Window:NewTab("ฟาม")
+local Section = Tab:NewSection("ฟาม")
+Section:NewButton("ดึงหี", "...", function()
+    local Cactus = game.Players.LocalPlayer.Character.HumanoidRootPart
+    for i,v in pairs(game.workspace.Jobs.Mining:GetChildren()) do
+    v.CFrame = Cactus.CFrame
+    wait(0.2)
+    end
+    end)
